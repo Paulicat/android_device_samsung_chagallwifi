@@ -17,6 +17,7 @@ allow vcs vcs_device:chr_file create_file_perms;
 
 allow vcs tee_device:chr_file rw_file_perms;
 
-allow vcs kernel:system module_request;
-allow vcs secmem_device:chr_file { ioctl open read write };
 allow vcs tee:unix_stream_socket connectto;
+
+# /dev/s5p-smem
+allow vcs secmem_device:chr_file { read write ioctl open };

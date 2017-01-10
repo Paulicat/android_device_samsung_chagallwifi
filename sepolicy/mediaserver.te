@@ -1,2 +1,0 @@
-allow mediaserver sensorservice_service:service_manager { find } ;
-allow mediaserver healthd_service:service_manager { find } ;
